@@ -1,0 +1,18 @@
+JAVA_CLASSPATH="junit.jar:xalan.jar:xercesImpl.jar:xml-apis.jar"
+inherit ant
+
+
+HOMEPAGE="http://xmldb-org.sourceforge.net/"
+SRC_URI="mirror://sourceforge/xmldb-org/xmldb-api-11112001.tar.gz
+         mirror://portage/dev-java/xmldb/files/build-${PV}.xml"
+SRC_DIR=${ORIG_PN}
+
+PATCH_URI="mirror://portage/dev-java/xmldb/files/xmldb-${PV}-unreachable.patch"
+
+DISTCLEANFILES="*.jar"
+
+ANT_BUILD_XML="build-${PV}.xml"
+ANT_BUILD_ARGS="-Dsrc=. -Dproject.name=${ORIG_PN}"
+ANT_BUILD_TARGETS="jar javadoc"
+ANT_INSTALL_JARS="dist/*.jar"
+ANT_INSTALL_JAVADOC="dist/doc/api"
