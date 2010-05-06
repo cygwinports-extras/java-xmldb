@@ -1,0 +1,4 @@
+category: Java
+requires: java-xalan java-xerces2 java-xml-commons-external
+sdesc: "Java XML:DB spec library"
+ldesc: "Java implementation for specifications made by XML:DB."
